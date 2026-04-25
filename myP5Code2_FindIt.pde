@@ -28,6 +28,7 @@ mouseClicked = function(){
   check(mouseX, mouseY);
 };
 
+  //for loop checks if mouse click is close to any planet position
 var check = function(xClick, yClick){
 
   for(var i = 0; i < planetXPos.length; i++){
@@ -38,6 +39,8 @@ var check = function(xClick, yClick){
     }
   }
 };
+
+  //while loop creates "Space Dust" particles across the top
 
 var display = function(){
   background(20, 20, 40); // Darker space background
@@ -77,6 +80,8 @@ var reset = function(){
   planetXPos = [];
   planetYPos = [];
   planetFound = 0;
+
+  // for loop pushes random coordinates into the star arrays
 
   for(var i = 0; i < starTotal; i++){
     starXPos.push(random(0, 600));
